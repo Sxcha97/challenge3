@@ -1,0 +1,292 @@
+body{
+	font-family: helvetica;
+	color: #FFFFFF;
+	background-color: #404040;
+	font-family: 'Noto Sans Mono', monospace;
+}
+
+.grid-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.live {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	width: 72px;
+}
+
+h1 {
+	color: #A8D6E4;
+	font-size: 20px;
+}
+
+#map {
+  height: 50vh;
+  width: 90vw;
+}
+
+
+#city {
+	margin: 20px;
+	width: 90vw;
+	height: 3vh;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Noto Sans Mono', monospace;
+	background-color: #5F5C5C;
+}
+
+#cityButton {
+	width: 200px;
+	height: 30px;
+	color: #000000;
+	font-family: 'Noto Sans Mono', monospace;
+	background-color: #A8D6E4;
+	margin-bottom: 20px;
+}
+
+.zoeken {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#weather {
+	background-color: #222222;
+	width: 88vw;
+	min-height: 100px;
+	padding: 6px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bewolkinglegenda {
+	margin-top: 20px;
+}
+
+#bewolking {
+	width: 90vw;
+}
+
+.temperatuurlegenda {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#temperatuur {
+	width: 90vw;
+}
+
+.hidden {
+	display: none;
+}
+
+
+@media only screen and (min-width: 820px) and (max-width: 1279px) {
+
+	h1 {
+		color: #A8D6E4;
+		font-size: 25px;
+	}
+
+	.legenda {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 90vw;
+		margin-bottom: 20px;
+	}
+
+	.bewolkinglegenda {
+		margin-top: 20px;
+	}
+
+	#bewolking {
+		width: 44vw;
+	}
+
+	.temperatuurlegenda {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+	#temperatuur {
+		width: 44vw;
+	}
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+
+	.grid-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+
+	#map {
+		margin-left: -300px;
+	  	height: 70vh;
+	 	width: 65vw;
+	}
+
+	.zoeken {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 850px;
+		margin-top: -580px;
+	}
+
+
+	#city {
+		margin: 20px;
+		width: 22vw;
+		height: 3vh;
+		text-align: center;
+		color: #FFFFFF;
+		font-family: 'Noto Sans Mono', monospace;
+		background-color: #5F5C5C;
+	}
+
+	#cityButton {
+		width: 23vw;
+		height: 30px;
+		color: #000000;
+		font-family: 'Noto Sans Mono', monospace;
+		background-color: #A8D6E4;
+		margin-bottom: 0px;
+	}
+
+	.legenda {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 45vw;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		margin-left: 850px;
+	}
+
+	.bewolkinglegenda {
+		margin-top: 20px;
+	}
+
+	#bewolking {
+		width: 22vw;
+	}
+
+	.temperatuurlegenda {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+	#temperatuur {
+		width: 22vw;
+	}
+
+
+	#weather {
+		width: 22vw;
+		margin-left: 850px;
+		margin-top: 40px;
+	}
+
+}
+
+
+
+
+
+ @media only screen and (min-width: 1920px) {
+ 	.grid-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+
+	#map {
+		margin-left: -600px;
+	  	height: 74vh;
+	 	width: 60vw;
+	}
+
+	.zoeken {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 1100px;
+		margin-top: -820px;
+	}
+
+
+	#city {
+		margin: 20px;
+		width: 23vw;
+		height: 3vh;
+		text-align: center;
+		color: #FFFFFF;
+		font-family: 'Noto Sans Mono', monospace;
+		background-color: #5F5C5C;
+	}
+
+	#cityButton {
+		width: 23vw;
+		height: 30px;
+		color: #000000;
+		font-family: 'Noto Sans Mono', monospace;
+		background-color: #A8D6E4;
+		margin-bottom: 0px;
+	}
+
+	.legenda {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50vw;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		margin-left: 1100px;
+	}
+
+	.bewolkinglegenda {
+		margin-top: 20px;
+	}
+
+	#bewolking {
+		width: 24vw;
+	}
+
+	.temperatuurlegenda {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+	#temperatuur {
+		width: 24vw;
+	}
+
+
+	#weather {
+		width: 23vw;
+		margin-left: 1100px;
+		margin-top: 40px;
+	}
+
+
+
+
+
+
+
+
+ }

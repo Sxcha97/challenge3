@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Landingsplan</title>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap'); 
+	</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+</head>
+<body>
+
+
+	<div class="grid-container">
+
+		<div class="grid-item live">
+			<img src="fotos/live_button.svg" >
+		</div>
+
+		<div class="grid-item titel">
+			<h1>BEREIKBAAR LANDINGSGEBIED</h1>
+		</div>
+		<div class="grid-item plattegrond">
+			<div id="map"></div>
+		</div>
+
+			
+		<div class="zoeken">
+			<div class="grid-item zoekbalk">
+				<input type="text" id="city">
+			</div>
+
+			<div class="grid-item zoekknop">
+				<input type="button" id="cityButton" value="WEER VAN DEZE STAD" />
+			</div>
+		</div>
+
+
+		<div class="grid-item weerinformatie">
+			<article id="weather"></article>
+		</div>
+
+		<div class="legenda">
+			<div class="grid-item bewolkinglegenda">
+				<img src="fotos/bewolking.svg" id="bewolking">
+			</div>
+
+			<div class="grid-item temperatuurlegenda">
+				<img src="fotos/temperatuur.svg" id="temperatuur">
+			</div>
+		</div>
+
+
+
+	</div>
+	
+
+
+
+
+
+	<script src="scripts/main.js"> </script>
+	<script src="scripts/bereik.js"></script>
+
+</body>
+</html>
