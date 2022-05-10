@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body{
 	font-family: helvetica;
 	color: #FFFFFF;
@@ -55,7 +59,7 @@ h1 {
 
 #weather {
 	background-color: #222222;
-	width: 88vw;
+	width: 100%;
 	min-height: 100px;
 	padding: 6px;
 	text-align: center;
@@ -85,6 +89,10 @@ h1 {
 	display: none;
 }
 
+.informatie {
+		width: 90vw;
+}
+
 
 @media only screen and (min-width: 820px) and (max-width: 1279px) {
 
@@ -98,7 +106,7 @@ h1 {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		width: 90vw;
+		width: 100%;
 		margin-bottom: 20px;
 	}
 
@@ -119,38 +127,99 @@ h1 {
 		width: 44vw;
 	}
 
+	
+
 }
 
 
 
 
 
-@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+@media only screen and (min-width: 1280px) {
 
 	.grid-container {
-		display: flex;
+		display: grid;
 		flex-direction: column;
 		align-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 40px;
+		grid-gap: 30px;
+  	grid-template-rows: auto;
+		grid-template-areas: 
+		". live ."
+		". titel ."
+		"plattegrond plattegrond informatie";
+		
 }
 
+	.live {
+		grid-area: live;
+		display: flex;
+		justify-content: center;
+
+	}
+
+	.titel {
+		grid-area: titel;
+		display: flex;
+		justify-content: center;
+	}
+
+	.plattegrond {
+		grid-area: plattegrond;
+	}
+
+	.informatie {
+		grid-area: informatie;
+		width: 100%;
+		padding: 20px 40px;
+	}
+
+	.zoekbalk {
+		grid-area: zoekbalk;
+	}
+
+	.zoekknop {
+		grid-area: zoekknop;
+	}
+
+	.weerinformatie {
+		grid-area: weerinformatie;
+		display: flex;
+		justify-content: center;
+	}
+
+	.bewolkinglegenda {
+		grid-area: bewolkinglegenda;
+	}
+
+.temperatuurlegenda {
+	grid-area: temperatuurlegenda;
+}
+
+.grid-item {
+	width: 100%;
+}
+
+
+
 	#map {
-		margin-left: -300px;
 	  	height: 70vh;
-	 	width: 65vw;
+	 	width: 100%;
 	}
 
 	.zoeken {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-left: 850px;
-		margin-top: -580px;
+		width: 100%;
+		
 	}
 
 
 	#city {
-		margin: 20px;
-		width: 22vw;
+		margin: 20px 0;
+		width: 100%;
 		height: 3vh;
 		text-align: center;
 		color: #FFFFFF;
@@ -159,22 +228,22 @@ h1 {
 	}
 
 	#cityButton {
-		width: 23vw;
+		width: 100%;
 		height: 30px;
 		color: #000000;
 		font-family: 'Noto Sans Mono', monospace;
 		background-color: #A8D6E4;
 		margin-bottom: 0px;
+    
+  
 	}
 
 	.legenda {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 45vw;
 		margin-bottom: 20px;
 		margin-top: 30px;
-		margin-left: 850px;
 	}
 
 	.bewolkinglegenda {
@@ -182,7 +251,7 @@ h1 {
 	}
 
 	#bewolking {
-		width: 22vw;
+		width: 100%;
 	}
 
 	.temperatuurlegenda {
@@ -191,102 +260,25 @@ h1 {
 	}
 
 	#temperatuur {
-		width: 22vw;
+		width: 100%;
 	}
 
 
 	#weather {
-		width: 22vw;
-		margin-left: 850px;
+		width: 100%;
 		margin-top: 40px;
 	}
 
 }
-
-
 
 
 
  @media only screen and (min-width: 1920px) {
  	.grid-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-}
-
-	#map {
-		margin-left: -600px;
-	  	height: 74vh;
-	 	width: 60vw;
-	}
-
-	.zoeken {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-left: 1100px;
-		margin-top: -820px;
-	}
-
-
-	#city {
-		margin: 20px;
-		width: 23vw;
-		height: 3vh;
-		text-align: center;
-		color: #FFFFFF;
-		font-family: 'Noto Sans Mono', monospace;
-		background-color: #5F5C5C;
-	}
-
-	#cityButton {
-		width: 23vw;
-		height: 30px;
-		color: #000000;
-		font-family: 'Noto Sans Mono', monospace;
-		background-color: #A8D6E4;
-		margin-bottom: 0px;
-	}
-
-	.legenda {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 50vw;
-		margin-bottom: 20px;
-		margin-top: 30px;
-		margin-left: 1100px;
-	}
-
-	.bewolkinglegenda {
-		margin-top: 20px;
-	}
-
-	#bewolking {
-		width: 24vw;
-	}
-
-	.temperatuurlegenda {
-		margin-top: 20px;
-		margin-bottom: 0px;
-	}
-
-	#temperatuur {
-		width: 24vw;
-	}
-
-
-	#weather {
-		width: 23vw;
-		margin-left: 1100px;
-		margin-top: 40px;
-	}
-
-
-
-
-
-
-
+ 		 max-width: 1480px;
+ 		 margin: 0 auto;
+ 	}
 
  }
+
+
